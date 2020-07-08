@@ -11,6 +11,7 @@ var app = express()
 app.use(bodyparser.urlencoded({
     extended: true
 }))
+
 app.use(bodyparser.json())
 app.set('views', path.join(__dirname, '/views/'))
 app.engine('hbs', exphbs({
@@ -18,6 +19,7 @@ app.engine('hbs', exphbs({
     defaultLayout: 'mainLayout',
     layoutsDir: __dirname + '/views/layouts/'
 }))
+
 app.set('view engine', 'hbs')
 
 app.listen(3003, () => {
